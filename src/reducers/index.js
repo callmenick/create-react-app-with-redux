@@ -1,10 +1,8 @@
-import bedroom from './bedroom.js';
-import kitchen from './kitchen.js';
+import house from './house.js';
 import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
-  bedroom,
-  kitchen 
+  house
 });
 
 export default rootReducer;

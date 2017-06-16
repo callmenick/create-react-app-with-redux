@@ -1,10 +1,6 @@
 import * as types from '../actions/action-types';
 
-const initialState = {
-    light: 'OFF',
-}
-
-export default (state = initialState, action) => {
+export default (state, action) => {
   switch (action.type) {
     case types.LIGHT_ON:
       return Object.assign({}, state, {light: 'ON'});

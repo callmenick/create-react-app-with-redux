@@ -1,30 +1,26 @@
 import React, {PropTypes} from 'react';
 
 const Bedroom = (props) => {
+  const {
+    light,
+    onLightOn,
+    onLightOff,
+    onLightDim,
+  } = props;
 
-    const { 
-      light, 
-      onLightOn, 
-      onLightOff, 
-      onLightDim, 
-    } = props;
+  const style = {
+    backgroundColor: mapLightToColor(light),
+  }
 
-    const style = {
-      backgroundColor: mapLightToColor(light),
-    }
-
-    return (
-
-      <div className='room' style={style} >
-        <h2 className='white'>Bedroom</h2>
-        <span className='white'>Light switch: </span>
-        <button onClick={onLightOn}> turn on </button>
-        <button onClick={onLightDim}> dim </button>
-        <button onClick={onLightOff}> turn off </button>
-      </div>
-
-    );
-
+  return (
+    <div className='room' style={style} >
+      <h2 className='white'>Bedroom</h2>
+      <span className='white'>Light switch: </span>
+      <button onClick={onLightOn}> turn on </button>
+      <button onClick={onLightDim}> dim </button>
+      <button onClick={onLightOff}> turn off </button>
+    </div>
+  );
 }
 
 function mapLightToColor(light){

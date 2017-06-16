@@ -1,11 +1,6 @@
 import * as types from '../actions/action-types';
 
-const initialState = {
-    isKettleFilled: false,
-    isKettleHeated: false,
-}
-
-export default (state = initialState, action) => {
+export default (state, action) => {
   switch (action.type) {
     case types.KETTLE_FILL:
       return Object.assign({}, state, {isKettleFilled: true});

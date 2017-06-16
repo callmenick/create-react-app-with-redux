@@ -4,10 +4,10 @@ import * as kitchenActions from '../actions/kitchen';
 import Kitchen from '../components/Kitchen';
 
 function mapStateToProps(state, props) {
-    return {
-        isKettleFilled: state.kitchen.isKettleFilled,
-        isKettleHeated: state.kitchen.isKettleHeated,
-    };
+  return {
+    isKettleFilled: state.house.isKettleFilled,
+    isKettleHeated: state.house.isKettleHeated,
+  };
 }
 
 function mapDispatchToProps(dispatch) {
